@@ -178,35 +178,6 @@
         </div>
     </footer>
 
-    <script>
-        function showSection(sectionId) {
-            // Ocultar todas las secciones
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Mostrar la sección seleccionada
-            document.getElementById(sectionId).classList.add('active');
-            
-            // Actualizar nav activa
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.dataset.section === sectionId) {
-                    link.classList.add('active');
-                }
-            });
-            
-            // Scroll al inicio
-            window.scrollTo(0, 0);
-        }
-
-        // Manejar clicks en navegación
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                showSection(link.dataset.section);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
