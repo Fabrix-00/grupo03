@@ -7,24 +7,206 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>IESTP Pisco</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pages/carreras.html">Carreras</a></li>
-            <li><a href="pages/admision.html">Admisión</a></li>
-            <li><a href="pages/nosotros.html">Nosotros</a></li>
-            <li><a href="pages/contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">IESTP Pisco</div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio" class="nav-link" data-section="inicio">Inicio</a></li>
+                    <li><a href="#carreras" class="nav-link" data-section="carreras">Carreras</a></li>
+                    <li><a href="#admision" class="nav-link" data-section="admision">Admisión</a></li>
+                    <li><a href="#nosotros" class="nav-link" data-section="nosotros">Nosotros</a></li>
+                    <li><a href="#contacto" class="nav-link" data-section="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="btn-primary">Postula Ahora</button>
+        </div>
+    </header>
 
-    <section>
-        <h2>Lidera el Futuro con Educación Tecnológica de Calidad</h2>
-        <p>Formamos los profesionales técnicos que la industria moderna demanda.</p>
-    </section>
+    <main>
+        <!-- Sección: Inicio -->
+        <section id="inicio" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Lidera el Futuro con Educación Tecnológica de Calidad</h2>
+                    <p>Formamos los profesionales técnicos que la industria moderna demanda.</p>
+                    <div class="btn-group">
+                        <button class="btn-primary" onclick="showSection('carreras')">Ver Carreras</button>
+                        <button class="btn-secondary" onclick="showSection('admision')">Postulación</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2024 IESTP Pisco. Todos los derechos reservados.</p>
+        <!-- Sección: Carreras -->
+        <section id="carreras" class="section">
+            <div class="container">
+                <h2 class="section-title">Carreras Técnicas</h2>
+                <p class="section-subtitle">Programas diseñados para la inserción laboral inmediata con alta especialización técnica.</p>
+                <div class="careers-grid">
+                    <div class="career-card">
+                        <div class="card-icon">💻</div>
+                        <h3>Computación e Informática</h3>
+                        <p>Desarrolla soluciones de software, gestión de redes y ciberseguridad para el mundo digital.</p>
+                        <div class="card-meta">3 AÑOS | TÍTULO PROFESIONAL</div>
+                    </div>
+                    <div class="career-card">
+                        <div class="card-icon">🌐</div>
+                        <h3>Electrónica Industrial</h3>
+                        <p>Especialízate en sistemas de automatización, control de procesos y mantenimiento electrónico.</p>
+                        <div class="card-meta">3 AÑOS | TÍTULO PROFESIONAL</div>
+                    </div>
+                    <div class="career-card">
+                        <div class="card-icon">⚙️</div>
+                        <h3>Mecánica de Producción</h3>
+                        <p>Domina máquinas herramientas, procesos de soldadura y diseño mecánico industrial.</p>
+                        <div class="card-meta">3 AÑOS | TÍTULO PROFESIONAL</div>
+                    </div>
+                    <div class="career-card">
+                        <div class="card-icon">🚜</div>
+                        <h3>Producción Agropecuaria</h3>
+                        <p>Aplica tecnología en el sector agrícola y pecuario para optimizar la producción regional.</p>
+                        <div class="card-meta">3 AÑOS | TÍTULO PROFESIONAL</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Admisión -->
+        <section id="admision" class="section">
+            <div class="container">
+                <h2 class="section-title">Formulario de Admisión</h2>
+                <div class="form-wrapper">
+                    <form class="admission-form">
+                        <div class="form-group">
+                            <label>Nombre Completo:</label>
+                            <input type="text" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label>Email:</label>
+                            <input type="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Carrera de Interés:</label>
+                            <select required>
+                                <option value="">Selecciona una carrera</option>
+                                <option>Computación e Informática</option>
+                                <option>Electrónica Industrial</option>
+                                <option>Mecánica de Producción</option>
+                                <option>Producción Agropecuaria</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Teléfono:</label>
+                            <input type="tel" placeholder="+51 9XX XXX XXX">
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Nosotros -->
+        <section id="nosotros" class="section">
+            <div class="container">
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>Misión</h3>
+                        <p>Formar profesionales técnicos competentes y comprometidos con el desarrollo de la región, mediante programas académicos innovadores que responden a las necesidades del mercado laboral.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Visión</h3>
+                        <p>Ser una institución educativa reconocida por la excelencia en la formación técnica, líderes en innovación y comprometidos con el desarrollo sostenible de la comunidad.</p>
+                    </div>
+                </div>
+                <div class="about-values">
+                    <h3>Nuestros Valores</h3>
+                    <ul>
+                        <li>✓ Excelencia académica</li>
+                        <li>✓ Innovación tecnológica</li>
+                        <li>✓ Compromiso social</li>
+                        <li>✓ Integridad profesional</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Contacto -->
+        <section id="contacto" class="section">
+            <div class="container">
+                <h2 class="section-title">Contáctanos</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        <p><strong>Dirección:</strong> Av. Principal 123, Pisco, Ica</p>
+                        <p><strong>Teléfono:</strong> +51 (56) 123-456</p>
+                        <p><strong>Email:</strong> info@iestppisco.edu.pe</p>
+                        <p><strong>Horario:</strong> Lunes a Viernes 8:00 AM - 5:00 PM</p>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <label>Nombre:</label>
+                                <input type="text" required placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label>Email:</label>
+                                <input type="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Asunto:</label>
+                                <input type="text" required placeholder="Asunto del mensaje">
+                            </div>
+                            <div class="form-group">
+                                <label>Mensaje:</label>
+                                <textarea required placeholder="Tu mensaje..." rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 IESTP Pisco. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostrar la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Actualizar nav activa
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.section === sectionId) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Scroll al inicio
+            window.scrollTo(0, 0);
+        }
+
+        // Manejar clicks en navegación
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showSection(link.dataset.section);
+            });
+        });
+    </script>
 </body>
 </html>
